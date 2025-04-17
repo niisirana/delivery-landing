@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Landing</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap
+    rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+    />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <a href="/" class="logo">
+          <i class="fas fa-utensils" aria-hidden="true"></i>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link">Меню</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">О Нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#reviews" class="nav-link">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a href="#delivery" class="nav-link">Доставка</a>
+          </li>
+        </ul>
+
+        <div class="toggle_btn" aria-label="Меню">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="dropdown-menu">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link">Меню</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">О Нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#reviews" class="nav-link">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a href="#delivery" class="nav-link">Доставка</a>
+          </li>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <h1 class="hero-title">Вкусная еда с быстрой доставкой!</h1>
+        <p class="hero-subtitle">Доставка прямо к вашему порогу за 30 минут!</p>
+        <button class="order-button">Сделать заказ</button>
+      </section>
+
+      <section class="menu" id="menu">
+        <h2>Популярные блюда</h2>
+        <div class="card-container">
+          <div class="card">
+            <img
+              src="assets/photos/red_curry.webp"
+              alt="Красный карри"
+              loading="lazy"
+            />
+            <div class="card-text">
+              <h4>Red Curry</h4>
+              <p>lorem ipsum, ghodidssdospdsdosd,fdfkfjdkfkfjddkfjfd</p>
+              <p class="price">500 rubl</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/photos/dimsum.webp" alt="Димсам" loading="lazy" />
+            <div class="card-text">
+              <h4>Dimsum</h4>
+              <p>lorem ipsum, ghodidssdospdsdosd,fdfkfjdkfkfjddkfjfd</p>
+              <p class="price">600 rubl</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/photos/salmon.webp"
+              alt="Лосось с овощами"
+              loading="lazy"
+            />
+            <div class="card-text">
+              <h4>Salmon</h4>
+              <p>lorem ipsum, ghodidssdospdsdosd,fdfkfjdkfkfjddkfjfd</p>
+              <p class="price">1000 rubl</p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/photos/pasta.webp"
+              alt="Паста с креветками"
+              loading="lazy"
+            />
+            <div class="card-text">
+              <h4>Pasta</h4>
+              <p>lorem ipsum, ghodidssdospdsdosd,fdfkfjdkfkfjddkfjfd</p>
+              <p class="price">800 rubl</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <img
+          src="assets/photos/delivery_guy.webp"
+          alt="Доставщик"
+          loading="lazy"
+        />
+        <div class="benefits">
+          <h2>Почему выбирают нас?</h2>
+          <div class="benefit-container">
+            <div class="benefit">
+              <i class="fas fa-clock" aria-hidden="true" aria-setsize=""></i>
+              <div class="benefit-text">
+                <h4>Быстрая доставка</h4>
+                <p>Еда у двери за 30 минут — гарантированно!</p>
+              </div>
+            </div>
+            <div class="benefit">
+              <i class="fas fa-bowl-food" aria-hidden="true"></i>
+              <div class="benefit-text">
+                <h4>Свежие продукты</h4>
+                <p>Готовим из лучшего — как для себя.свежая и вкусная.</p>
+              </div>
+            </div>
+            <div class="benefit">
+              <i class="fas fa-comments" aria-hidden="true"></i>
+              <div class="benefit-text">
+                <h4>Поддержка 24/7</h4>
+                <p>Ответим в любое время — даже ночью.</p>
+              </div>
+            </div>
+            <div class="benefit">
+              <i class="fas fa-money-check-dollar" aria-hidden="true"></i>
+              <div class="benefit-text">
+                <h4>Выгодные цены</h4>
+                <p>Скидки, комбо и акции — каждый день.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <h2>Отзывы клиентов</h2>
+        <div class="reviews-carousel">
+          <div class="reviews-container" id="reviews-slider">
+            <div class="review">
+              <img
+                src="assets/photos/ivan.webp"
+                alt="Иван Иванов"
+                loading="lazy"
+              />
+              <h4>Иван Иванов</h4>
+              <p>
+                "Очень вкусная еда и быстрая доставка! Обязательно закажу ещё
+                раз."
+              </p>
+              <div class="stars" aria-label="Рейтинг: 5 звёзд">★★★★★</div>
+            </div>
+            <div class="review">
+              <img
+                src="assets/photos/anastasia.webp"
+                alt="Анастасия Смирнова"
+                loading="lazy"
+              />
+              <h4>Анастасия Смирнова</h4>
+              <p>"Все понравилось, но хотелось бы больше вариантов в меню."</p>
+              <div class="stars" aria-label="Рейтинг: 5 звёзд">★★★★☆</div>
+            </div>
+            <div class="review">
+              <img
+                src="assets/photos/alice.webp"
+                alt="Алиса Романова"
+                loading="lazy"
+              />
+              <h4>Алиса Романова</h4>
+              <p>"Отличное качество и приятные цены! Рекомендую!"</p>
+              <div class="stars" aria-label="Рейтинг: 5 звёзд">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="arrows">
+            <button class="arrow-left" aria-label="Предыдущий отзыв">◀</button>
+            <button class="arrow-right" aria-label="Следующий отзыв">▶</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery" id="delivery">
+        <h2>Оформите заказ за 1 минуту</h2>
+
+        <form id="order-form" method="post">
+          <fieldset class="form-group">
+            <legend class="visually-hidden">Контактные данные</legend>
+
+            <div class="input-group">
+              <label for="name" class="input-label visually-hidden"
+                >Ваше имя</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ваше имя"
+                required
+                minlength="2"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="phone" class="visually-hidden phone-input"
+                >Телефон</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (___) ___-__-__"
+                pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <legend class="visually-hidden">Адрес доставки</legend>
+
+            <div class="input-group">
+              <label for="address" class="visually-hidden">Адрес</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Улица, дом, квартира"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <div class="input-group">
+            <label for="comment" class="visually-hidden">Комментарий</label>
+            <textarea
+              id="comment"
+              name="comment"
+              placeholder="Комментарий к заказу"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="order-button">Сделать заказ</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <p>Адрес: ул. Вкусная, д. 10, Москва</p>
+          <p>Телефон: +7 (900) 123-45-67</p>
+          <p>Почта: hello@pishka.ru</p>
+        </div>
+        <div class="footer-section">
+          <h4>Социальные сети</h4>
+          <div class="socials">
+            <a
+              href="#"
+              class="fab fa-instagram"
+              aria-hidden="true"
+              aria-label="Instagram"
+            ></a>
+            <a
+              href="#"
+              class="fab fa-vk"
+              aria-hidden="true"
+              aria-label="ВКонтанте"
+            ></a>
+            <a
+              href="#"
+              class="fab fa-telegram"
+              aria-hidden="true"
+              aria-label="Telegram"
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Пышка. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
