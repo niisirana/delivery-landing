@@ -261,6 +261,23 @@ header {
   gap: 64px;
 }
 
+.reviews-wrapper {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 3.75rem;
+  width: 380px;
+  overflow: visible;
+  transition: transform 0.4s ease;
+}
+
 /* ======== Review Card ======= */
 .review {
   width: 380px;
@@ -274,6 +291,17 @@ header {
   padding: 24px 20px;
   border-radius: 16px;
   box-shadow: var(--shadow);
+  flex-shrink: 0;
+  transform: translateY(40px);
+  z-index: 1;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.review.active {
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 2;
 }
 
 .review > img {
@@ -290,17 +318,30 @@ header {
 
 .arrow-right,
 .arrow-left {
+  position: absolute;
   background: none;
   border: none;
   cursor: pointer;
   color: #ccc;
   font-size: 40px;
-  transition: color 0.3s ease-in-out;
+}
+
+.arrow-left {
+  left: -60px;
+}
+
+.arrow-right {
+  right: -60px;
 }
 
 .arrow-right:hover,
 .arrow-left:hover {
   color: var(--primary);
+}
+
+.arrow-left:disabled,
+.arrow-right:disabled {
+  display: none;
 }
 
 /* ======== Delivery ======= */
