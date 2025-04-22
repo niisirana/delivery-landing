@@ -6,10 +6,12 @@
   --bg2: #f9f9f9;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --grey-light: #ccc;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -21,13 +23,18 @@ body {
 }
 
 h1 {
-  font-size: calc(60 / 16 * 1rem);
-  font-weight: bold;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
 }
 
 h2 {
-  font-size: calc(36 / 16 * 1rem);
-  font-weight: bold;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 p {
@@ -35,13 +42,10 @@ p {
   font-size: 1rem;
 }
 
-i {
+.icon,
+.fa-solid {
   font-size: 2rem;
   color: var(--text);
-}
-
-a:hover {
-  color: var(--primary);
 }
 
 /* ======== Header ======= */
@@ -49,16 +53,18 @@ header {
   padding: 0 2rem;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   background: #fff;
   box-shadow: var(--shadow);
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  will-change: transform;
 }
 
 .nav-bar {
   width: 100%;
-  height: 70px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -109,11 +115,11 @@ header {
 /* ======== Hero ======= */
 .hero {
   margin-top: 70px;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  position: relative;
   background-position: center;
   background-size: cover;
+  background-attachment: scroll;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
@@ -126,10 +132,11 @@ header {
   justify-content: center;
   gap: 20px;
   color: #fff;
+  padding: 2rem;
 }
 
 .hero > p {
-  color: #ccc;
+  color: var(--grey-light);
 }
 
 /* ======== Button ======= */
@@ -144,11 +151,6 @@ header {
   width: 213px;
   height: 60px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.order-button:hover {
-  background-color: #ff3300;
-  transform: scale(1.05);
 }
 
 /* ======== Menu ======= */
@@ -172,7 +174,7 @@ header {
 /* ======== Food Card ======= */
 .card {
   width: 280px;
-  height: 360px;
+  aspect-ratio: 7/9;
   background-color: var(--bg1);
   display: flex;
   flex-direction: column;
@@ -181,12 +183,7 @@ header {
   word-wrap: break-word;
   overflow-wrap: break-word;
   gap: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-  box-shadow: var(--hover-shadow);
-  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-text {
@@ -259,6 +256,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 64px;
+  overflow: hidden;
 }
 
 .reviews-wrapper {
@@ -280,7 +278,7 @@ header {
 
 /* ======== Review Card ======= */
 .review {
-  width: 380px;
+  flex: 0 0 380px;
   height: 280px;
   background-color: var(--bg1);
   display: flex;
@@ -316,27 +314,22 @@ header {
   font-size: 24px;
 }
 
-.arrow-right,
-.arrow-left {
-  position: absolute;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ccc;
-  font-size: 40px;
+.arrow-right {
+  right: -60px;
 }
 
 .arrow-left {
   left: -60px;
 }
 
-.arrow-right {
-  right: -60px;
-}
-
-.arrow-right:hover,
-.arrow-left:hover {
-  color: var(--primary);
+.arrow-right,
+.arrow-left {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--grey-light);
+  font-size: 40px;
 }
 
 .arrow-left:disabled,
@@ -372,7 +365,7 @@ textarea {
   min-height: 50px;
   padding: 10px 16px;
   border-radius: 12px;
-  border: 2px solid #ccc;
+  border: 2px solid var(--grey-light);
   outline: none;
   resize: none;
   font-family: inherit;
@@ -382,7 +375,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: #ccc;
+  color: var(--grey-light);
   opacity: 1;
 }
 
@@ -403,9 +396,51 @@ footer {
   background-color: #222;
   color: #fff;
   font-size: 14px;
+}
+
+.footer-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.footer-section p {
+  font-size: 0.8rem;
+  color: var(--grey-light);
+  margin: 4px 0;
+  text-align: left;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.fa-brands {
+  font-size: 24px;
+  transition: transform 0.2s ease;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  color: #888;
+  margin-top: 24px;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 1023px) {
@@ -416,7 +451,7 @@ footer {
     display: block;
   }
   .nav-menu {
-    display: none;
+    visibility: hidden;
   }
   .dropdown-menu {
     display: block;
@@ -424,11 +459,35 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
   .dropdown-menu {
     width: unset;
     left: 2rem;
   }
-  .card-container {
-    grid-template-columns: 1fr;
+  .reviews-container {
+    width: 280px;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--primary);
+  }
+  .order-button:hover {
+    background-color: #ff3300;
+    transform: scale(1.05);
+  }
+  .card:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-5px);
+  }
+  .arrow-right:hover,
+  .arrow-left:hover {
+    color: var(--primary);
+  }
+  .fa-brands:hover {
+    transform: translateY(-2px);
   }
 }

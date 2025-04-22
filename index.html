@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delivery Landing</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap
-    rel="stylesheet" />
-    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   </head>
@@ -27,7 +25,7 @@
     <header>
       <nav class="nav-bar">
         <a href="/" class="logo">
-          <i class="fas fa-utensils" aria-hidden="true"></i>
+          <i class="fas fa-utensils icon" aria-hidden="true"></i>
         </a>
 
         <ul class="nav-menu">
@@ -49,10 +47,10 @@
         </ul>
 
         <div class="toggle_btn" aria-label="Меню">
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars icon"></i>
         </div>
 
-        <div class="dropdown-menu">
+        <ul class="dropdown-menu">
           <li class="nav-item">
             <a href="#hero" class="nav-link">Главная</a>
           </li>
@@ -68,11 +66,11 @@
           <li class="nav-item">
             <a href="#delivery" class="nav-link">Доставка</a>
           </li>
-        </div>
+        </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="main">
       <section class="hero" id="hero">
         <h1 class="hero-title">Вкусная еда с быстрой доставкой!</h1>
         <p class="hero-subtitle">Доставка прямо к вашему порогу за 30 минут!</p>
@@ -139,28 +137,32 @@
           <h2>Почему выбирают нас?</h2>
           <div class="benefit-container">
             <div class="benefit">
-              <i class="fas fa-clock" aria-hidden="true" aria-setsize=""></i>
+              <i
+                class="fas fa-clock icon"
+                aria-hidden="true"
+                aria-setsize=""
+              ></i>
               <div class="benefit-text">
                 <h4>Быстрая доставка</h4>
                 <p>Еда у двери за 30 минут — гарантированно!</p>
               </div>
             </div>
             <div class="benefit">
-              <i class="fas fa-bowl-food" aria-hidden="true"></i>
+              <i class="fas fa-bowl-food icon" aria-hidden="true"></i>
               <div class="benefit-text">
                 <h4>Свежие продукты</h4>
                 <p>Готовим из лучшего — как для себя.свежая и вкусная.</p>
               </div>
             </div>
             <div class="benefit">
-              <i class="fas fa-comments" aria-hidden="true"></i>
+              <i class="fas fa-comments icon" aria-hidden="true"></i>
               <div class="benefit-text">
                 <h4>Поддержка 24/7</h4>
                 <p>Ответим в любое время — даже ночью.</p>
               </div>
             </div>
             <div class="benefit">
-              <i class="fas fa-money-check-dollar" aria-hidden="true"></i>
+              <i class="fas fa-money-check-dollar icon" aria-hidden="true"></i>
               <div class="benefit-text">
                 <h4>Выгодные цены</h4>
                 <p>Скидки, комбо и акции — каждый день.</p>
@@ -281,7 +283,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
           <h4>Контакты</h4>
@@ -292,31 +294,25 @@
         <div class="footer-section">
           <h4>Социальные сети</h4>
           <div class="socials">
-            <a
-              href="#"
-              class="fab fa-instagram"
-              aria-hidden="true"
-              aria-label="Instagram"
-            ></a>
-            <a
-              href="#"
-              class="fab fa-vk"
-              aria-hidden="true"
-              aria-label="ВКонтанте"
-            ></a>
-            <a
-              href="#"
-              class="fab fa-telegram"
-              aria-hidden="true"
-              aria-label="Telegram"
-            ></a>
+            <div class="socials">
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" aria-label="VK">
+                <i class="fa-brands fa-vk"></i>
+              </a>
+              <a href="#" aria-label="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>© 2025 Пышка. Все права защищены.</p>
-        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Пышка. Все права защищены.</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/imask"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
